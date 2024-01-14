@@ -1,5 +1,6 @@
 export function Post(props) {
-    if (props.author != '') {
+    console.log(props)
+    if (props.author != null) {
         return (
             <>
                 <strong>{props.author}</strong>

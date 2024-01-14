@@ -1,9 +1,12 @@
 import { Post } from "./Post"
+import { Header } from "./components/Header"
+
+import './global.css'
 
 function App() {
   return (
     <>
-      <h1>Hello world</h1>
+      <Header />
       <Post
         author="Alan Hideyuki Shishido"
         content="lorien alguma coisa"
