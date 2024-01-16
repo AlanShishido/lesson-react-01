@@ -23,6 +23,8 @@
     color: var(--green-500);
     text-decoration: none;
     transition: color 0.1s, background-color 0.1s;
+
+    border-radius: 2px;
 }
 
 .content a:hover {
