@@ -10,11 +10,11 @@ import { ChangeEvent, FormEvent, InvalidEvent, useState } from 'react'
 interface Author {
     name: string,
     role: string,
-    avatarUrl: string
+    avatar: string
 }
 
 interface Content {
-    type: 'paragraph' | 'link',
+    type: string,
     content: string
 }
 
@@ -55,7 +55,7 @@ export function Post ({author, content, publishedAt}: PostProps) {
         event.target.setCustomValidity('Este campo é obrigatório')
     }
 
-    function deleteComment(commentToDelete: Content) {
+    function deleteComment(commentToDelete: string) {
         const commentWithoutDeletedOne = comments.filter(comment => {
             return comment !== commentToDelete
         })
@@ -74,7 +74,7 @@ export function Post ({author, content, publishedAt}: PostProps) {
                     </div>
                 </div>
 
-                <time title={publishedDataFormated} dataTime={publishedAt.toISOString()}>
+                <time title={publishedDataFormated} dateTime={publishedAt.toISOString()}>
                     {publishedDateRelativeNow}
                 </time>
             </header>
